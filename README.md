@@ -61,22 +61,3 @@ http://www.shuxue9.com/pep/cz8s/ebook/167.jpg
 |  |  |  |
 
 
-
-
-if __name__ == '__main__':
-    cookiesStr = """__guid=66859048.1158483362161654500.1518005152651.3875; cdb_cookietime=2592000; cdb_auth=Vwd79Mo3xKHsS5P%2FgwDFjNZ1aJlZhljqDAxg48oRrKfQEGoVnAACJylkGahC8rYSoA; cdb_visitedfid=5D41D61D59D53D85D86D60D57D11D65; is_use_cookiex=yes; cdb_fid5=1520128530; cdb_sid=rzs7cS; cdb_oldtopics=D2131051D1996862D1996861D1996872D2131070D2131071D2131072D; monitor_count=259; is_use_cookied=yes"""
-
-
-    rootBegin ="http://www.shuxue9.com/pep/cz8s/ebook/001.jpg"
-    rootBegin ="http://www.shuxue9.com/pep/cz8s/ebook/107.jpg"
-
-    for i in range(1,108):   # 遍历所有的页面
-        if(i < 10):
-            rootbase_url = "http://www.shuxue9.com/pep/cz8s/ebook/00" + str(+i + 0) +".jpg"
-        if(i < 100):
-            rootbase_url = "http://www.shuxue9.com/pep/cz8s/ebook/0" + str(+i + 0) +".jpg"
-        if(i >= 100):
-            rootbase_url = "http://www.shuxue9.com/pep/cz8s/ebook/" + str(+i + 0) +".jpg"
-        mPageArray.add(rootbase_url)
-
-print("mPageArray length:"+ str(mPageArray.__len__()))
