@@ -61,3 +61,16 @@ http://www.shuxue9.com/pep/cz8s/ebook/167.jpg
 |  |  |  |
 
 
+# 考试
+
+
+## 云南大理中考
+
+
+### 2018中考
+
+
+#### 2018中考州录取线
+
+
+<img src="./zimage/ScorePaper/others/zhongkao.jpg" />
