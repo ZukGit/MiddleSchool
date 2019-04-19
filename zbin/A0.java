@@ -64,7 +64,7 @@ public class A0 {
             System.out.println("input argument is invalid ! retry input again!");
             return;
         }
-            System.out.println("mFilePath =  "+ mFilePath);
+
         if (curFile != null) {
             fillOriginArr(curFile);   // 填充  stringArrTitleOrigin  和  stringArrSource
             fillTitleEnglish();   //  填充 stringArrTitleEnglish
