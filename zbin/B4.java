@@ -6,6 +6,7 @@ import cn.hutool.core.swing.clipboard.ClipboardUtil;
 import cn.hutool.core.util.RuntimeUtil;
 
 import java.io.BufferedWriter;
+import java.io.*;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
@@ -216,25 +217,36 @@ public class B4 {
     }
 
 
+
     public static void appendToFile(File file) {
         try {
             if(!file.exists()){
                 file.createNewFile();
             }
-            BufferedWriter curBW = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), "utf-8"));
-           if(index == 1){
-               curBW.append("============开机打印【"+DateUtil.today()+ "】==========");
-           }else{
-               curBW.append(DateUtil.today());
-           }
-            curBW.close();
-        } catch( Exception e ){
 
 
+
+        // 打开一个随机访问文件流，按读写方式
+        RandomAccessFile randomFile = new RandomAccessFile(file, "rwd");
+        // 文件长度，字节数
+        long fileLength = randomFile.length();
+        // 将写文件指针移到文件尾。
+        randomFile.seek(fileLength);
+
+        if(index == 1){
+            randomFile.write(("index = "+index+"============开机打印【"+DateUtil.now()+ "】========== \n").getBytes("utf-8"));
+        }else{
+            randomFile.write((" index = "+index +"【"+DateUtil.now()+ "】 \n").getBytes("utf-8"));
         }
+        //  randomFile.write("\n".getBytes());  // 换行
+        randomFile.close();
+    } catch( Exception e ){
 
 
     }
+    }
+
+
 
 
 
