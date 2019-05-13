@@ -7,3 +7,4 @@ git commit -m "ио╢╚"
 git push
 
 @ECHO on
+exit
